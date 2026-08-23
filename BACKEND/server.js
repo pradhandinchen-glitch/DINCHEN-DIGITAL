@@ -10,6 +10,14 @@ const recipient = process.env.CONTACT_EMAIL || 'pradhandinchen@gmail.com';
 app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
 app.use(express.json({ limit: '20kb' }));
 
+app.get('/', (_request, response) => {
+  response.json({
+    ok: true,
+    service: 'DINCHEN DIGITAL',
+    message: 'Backend is running successfully!'
+  });
+});
+
 app.get('/api/health', (_request, response) => {
   response.json({ ok: true, service: 'DINCHEN DIGITAL' });
 });
