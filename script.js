@@ -13,7 +13,7 @@ document.querySelectorAll('.main-nav a').forEach((link) => {
   });
 });
 
-const apiBase = window.DINCHEN_API_URL || 'http://localhost:3000';
+const apiBase = 'https://dinchen-digital.onrender.com';
 
 document.querySelector('.contact-form').addEventListener('submit', async (event) => {
   event.preventDefault();
